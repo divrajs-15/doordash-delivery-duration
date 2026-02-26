@@ -1,0 +1,6 @@
+data/*.csv
+*.duckdb
+*.sqlite
+.Rhistory
+.RData
+.Rproj.user/
