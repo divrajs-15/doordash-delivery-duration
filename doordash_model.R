@@ -648,6 +648,21 @@ importance <- xgb.importance(model = xgb_model)
 # View top 15 important features
 head(importance, 15)
 
+# Save model performance metrics
+model_results <- data.frame(
+  Model = c("Linear", "Elastic Net", "XGBoost"),
+  MAE = c(mae, mae_enet, mae_xgb),
+  RMSE = c(rmse, rmse_enet, rmse_xgb)
+)
+
+write.csv(model_results, "outputs/model_results.csv", row.names = FALSE)
+
+# Save feature importance
+importance_df <- importance
+write.csv(importance_df, "outputs/feature_importance.csv", row.names = FALSE)
+
+
+
 ############################################################
 # Model Comparison and Interpretation
 #

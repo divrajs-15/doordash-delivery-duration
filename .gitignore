@@ -5,3 +5,4 @@ data/*.csv
 .RData
 .Rproj.user/
 .DS_Store
+dashboard_files/
