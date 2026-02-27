@@ -3,6 +3,7 @@ title: "DoorDash Delivery Duration Prediction"
 author: "Divraj Singh"
 format:
   html:
+    embed-resources: true
     toc: true
     theme: cosmo
     code-fold: true
@@ -120,5 +121,3 @@ ggplot(predictions, aes(x = actual, y = predicted)) +
 - The model slightly underestimates very long deliveries, likely due to trimmed outliers and limited extreme-case signal.
 - The spread of points increases as delivery time increases, meaning prediction errors grow for longer deliveries.
 - Overall, the model captures the central tendency well but remains less precise in the upper tail.
-
-

@@ -642,6 +642,15 @@ rmse_xgb <- sqrt(mean((pred_xgb - y_test)^2))
 mae_xgb
 rmse_xgb
 
+# Saveing Test Predictions for Dashboard
+
+predictions_df <- data.frame(
+  actual = y_test,
+  predicted = pred_xgb
+)
+
+write.csv(predictions_df, "outputs/test_predictions.csv", row.names = FALSE)
+
 # Feature importance
 importance <- xgb.importance(model = xgb_model)
 
