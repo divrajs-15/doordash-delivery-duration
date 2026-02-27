@@ -1,9 +1,9 @@
 # 🚚 DoorDash Delivery Duration Prediction
 
 ## 🎯 Executive Summary
-Built an end-to-end machine learning pipeline in **R** to predict delivery duration using structured SQL data engineering and gradient boosting.  
-Engineered congestion-based features that emerged as the strongest predictive drivers.  
-Improved **MAE by ~7%** over a linear baseline while maintaining strict leakage prevention and production-style workflow discipline.
+This project builds a production-style machine learning pipeline to predict DoorDash delivery duration using historical order data from a StrataScratch data project (“Delivery Duration Prediction”). The objective was to estimate total delivery time from order creation to final delivery while maintaining strict modeling discipline.
+
+Using DuckDB for structured SQL-based data engineering and R for modeling, I compared Linear Regression, Elastic Net, and XGBoost. The final gradient boosting model reduced **MAE by ~7%** relative to the linear baseline by capturing nonlinear congestion dynamics and interaction effects.
 
 ---
 
@@ -106,20 +106,20 @@ Top predictive drivers:
 
 ---
 
+## 🎓 Learning Outcomes
+
+This project strengthened my understanding of production-style machine learning workflows. I built a structured SQL preprocessing layer in DuckDB, engineered congestion-based features grounded in marketplace dynamics, and maintained strict train/test discipline to prevent data leakage (e.g., training-only imputation and chronological splitting).
+
+Through comparing Linear Regression, Elastic Net, and XGBoost, I developed a stronger intuition for bias–variance tradeoffs. Elastic Net provided minimal improvement, indicating variance was not the primary limitation. Gradient Boosting reduced bias by capturing nonlinear congestion thresholds and interaction effects, improving **MAE by ~7%.**
+
+Debugging implementation issues — including feature matrix mismatches in `glmnet`, interpreting training vs. test MAE in XGBoost, and resolving deployment conflicts — reinforced the importance of reproducibility, evaluation rigor, and careful model validation beyond simply achieving better metrics.
+
+---
+
 ## 🚀 Future Improvements
 - Hyperparameter tuning via cross-validation  
 - Log-transforming the target to reduce heavy-tail effects  
 - Target encoding for `store_id`  
 - LightGBM / CatBoost comparison  
 - Deployment as a lightweight prediction API  
-
----
-
-## 🧠 What This Project Demonstrates
-- Structured SQL-based data engineering  
-- Strict train/test discipline  
-- Leakage prevention awareness  
-- Bias–variance reasoning  
-- Model comparison & interpretation  
-- Production-oriented thinking  
 
