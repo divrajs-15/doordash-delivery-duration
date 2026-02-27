@@ -9,8 +9,7 @@ Improved **MAE by ~7%** over a linear baseline while maintaining strict leakage 
 
 ## 🔗 Live Dashboard
 👉 **View Interactive Model Diagnostics:**  
-**[Open Dashboard](https://YOUR-USERNAME.github.io/doordash-delivery-duration/)**  
-_Replace with your actual GitHub Pages link._
+**[Open Dashboard](https://divrajs-15.github.io/doordash-delivery-duration/)** 
 
 ---
 
@@ -123,3 +122,4 @@ Top predictive drivers:
 - Bias–variance reasoning  
 - Model comparison & interpretation  
 - Production-oriented thinking  
+
